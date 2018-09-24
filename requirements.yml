@@ -1,4 +1,4 @@
 
 # from GitHub
-- src: https://github.com/pandorasnox/ansible-docker
+- src: https://github.com/pandorasnox/ansible-role-docker
   name: docker
