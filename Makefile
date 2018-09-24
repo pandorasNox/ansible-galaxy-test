@@ -14,5 +14,9 @@ cli: ##@development cli with ansible
 	# -v ~/.ssh:/root/.ssh:ro
 
 .PHONY: setup
-setup: ##setup runs ansible against inventory
+setup: ##setup installs ansible vendor roles
+	ansible-galaxy install -p ./ansible_vendor -r ./requirements.yml
+
+.PHONY: deploy
+deploy: ##deploy runs ansible against inventory
 	ansible-playbook cloud-vm.playbook.yml
